@@ -1,0 +1,1721 @@
+1-abrigos hoodie y con sierre
+2-poster 
+3-T-shirt
+4-llaveros en acrilico
+5-termo
+6-tazas
+7-alfombras
+8-cuadros de anime
+9-<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AnimeTop Store | Anime & Gaming | República Dominicana</title>
+  <meta name="description" content="AnimeTop - La mejor tienda de anime y gaming en República Dominicana. Hoodies personalizados, posters, lámparas LED, llaveros, mangas y más. ¡Compra online o visítanos!">
+  <meta name="keywords" content="anime, gaming, tienda dominicana, hoodies anime, posters anime, lámparas LED, manga, Republic Dominicana">
+  <meta property="og:title" content="AnimeTop Store - Anime & Gaming RD">
+  <meta property="og:description" content="La tienda de anime y gaming más TOP de República Dominicana 🔥">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@700;800;900&family=Oswald:wght@700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ===========================
+       CSS VARIABLES & RESET
+    =========================== */
+    :root {
+      --yellow: #FFD700;
+      --yellow-hot: #FFAA00;
+      --red: #E8192C;
+      --blue: #00A8E8;
+      --black: #0D0D0D;
+      --white: #FFFFFF;
+      --outline: 3px solid #0D0D0D;
+      --shadow: 4px 4px 0px #0D0D0D;
+      --shadow-big: 6px 6px 0px #0D0D0D;
+      --radius: 12px;
+      --wa-green: #25D366;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--black);
+      color: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* ===========================
+       SCROLLBAR
+    =========================== */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--black); }
+    ::-webkit-scrollbar-thumb { background: var(--yellow); border-radius: 4px; }
+
+    /* ===========================
+       NAVBAR
+    =========================== */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 1000;
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+      padding: 0 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 65px;
+    }
+
+    .nav-logo {
+      font-family: 'Bangers', cursive;
+      font-size: 2rem;
+      color: var(--yellow);
+      text-decoration: none;
+      letter-spacing: 2px;
+      text-shadow: 3px 3px 0 var(--red);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .nav-logo span { color: var(--red); }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: color 0.2s;
+      position: relative;
+    }
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px; left: 0;
+      width: 0; height: 3px;
+      background: var(--yellow);
+      transition: width 0.3s;
+    }
+    .nav-links a:hover { color: var(--yellow); }
+    .nav-links a:hover::after { width: 100%; }
+
+    .nav-wa-btn {
+      background: var(--wa-green);
+      color: white;
+      border: var(--outline);
+      box-shadow: var(--shadow);
+      padding: 8px 16px;
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 0.85rem;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-wa-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-big); }
+
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .hamburger span {
+      display: block;
+      width: 26px; height: 3px;
+      background: var(--yellow);
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+
+    /* Mobile Nav */
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 65px; left: 0; right: 0;
+      background: var(--black);
+      border-bottom: 3px solid var(--yellow);
+      z-index: 999;
+      flex-direction: column;
+      padding: 20px 5%;
+      gap: 16px;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--white);
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      padding: 10px 0;
+      border-bottom: 1px solid rgba(255,215,0,0.2);
+    }
+    .mobile-menu a:hover { color: var(--yellow); }
+
+    /* ===========================
+       HERO SECTION
+    =========================== */
+    #hero {
+      min-height: 100vh;
+      background: var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 100px 5% 60px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* Halftone dot pattern */
+    #hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.18) 1.5px, transparent 1.5px);
+      background-size: 22px 22px;
+      pointer-events: none;
+    }
+
+    /* Explosion shapes */
+    .hero-burst {
+      position: absolute;
+      width: 600px; height: 600px;
+      background: var(--yellow-hot);
+      clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.35;
+      animation: burst-rotate 20s linear infinite;
+    }
+    @keyframes burst-rotate { to { transform: translate(-50%, -50%) rotate(360deg); } }
+
+    .hero-content { position: relative; z-index: 2; max-width: 800px; }
+
+    .hero-badge {
+      display: inline-block;
+      background: var(--red);
+      color: white;
+      font-weight: 900;
+      font-size: 0.85rem;
+      padding: 6px 18px;
+      border-radius: 50px;
+      border: var(--outline);
+      box-shadow: var(--shadow);
+      margin-bottom: 20px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      animation: badge-bounce 2s ease-in-out infinite;
+    }
+    @keyframes badge-bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
+    }
+
+    .hero-title {
+      font-family: 'Bangers', cursive;
+      font-size: clamp(3rem, 10vw, 7rem);
+      color: var(--black);
+      line-height: 1;
+      letter-spacing: 3px;
+      margin-bottom: 12px;
+      -webkit-text-stroke: 2px var(--black);
+    }
+    .hero-title .highlight {
+      color: var(--red);
+      -webkit-text-stroke: 2px var(--black);
+      text-shadow: 5px 5px 0 var(--black);
+    }
+    .hero-title .highlight-blue {
+      color: var(--blue);
+      -webkit-text-stroke: 2px var(--black);
+      text-shadow: 5px 5px 0 var(--black);
+    }
+
+    .hero-sub {
+      font-size: clamp(1rem, 3vw, 1.4rem);
+      font-weight: 800;
+      color: var(--black);
+      margin-bottom: 32px;
+      line-height: 1.4;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: white;
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      padding: 14px 36px;
+      border: 3px solid var(--black);
+      box-shadow: var(--shadow-big);
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+    }
+    .btn-primary:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--black); }
+    .btn-primary:active { transform: translate(2px,2px); box-shadow: 2px 2px 0 var(--black); }
+
+    .btn-secondary {
+      background: var(--blue);
+      color: white;
+      font-family: 'Bangers', cursive;
+      font-size: 1.4rem;
+      letter-spacing: 2px;
+      padding: 14px 36px;
+      border: 3px solid var(--black);
+      box-shadow: var(--shadow-big);
+      border-radius: 10px;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+    }
+    .btn-secondary:hover { transform: translate(-3px,-3px); box-shadow: 9px 9px 0 var(--black); }
+
+    .hero-tags {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 28px;
+    }
+    .hero-tag {
+      background: var(--black);
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 0.8rem;
+      padding: 5px 14px;
+      border-radius: 50px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* Scroll indicator */
+    .scroll-down {
+      position: absolute;
+      bottom: 24px; left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      animation: scroll-bounce 1.5s ease-in-out infinite;
+      color: var(--black);
+      font-weight: 900;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+    }
+    .scroll-down svg { width: 24px; }
+    @keyframes scroll-bounce {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* ===========================
+       TRUST BAR
+    =========================== */
+    .trust-bar {
+      background: var(--black);
+      border-top: 3px solid var(--yellow);
+      border-bottom: 3px solid var(--yellow);
+      padding: 14px 5%;
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 800;
+      font-size: 0.9rem;
+      color: var(--white);
+    }
+    .trust-item span.icon { font-size: 1.3rem; }
+    .trust-item b { color: var(--yellow); }
+
+    /* ===========================
+       SECTION STYLES
+    =========================== */
+    section { padding: 80px 5%; }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-label {
+      display: inline-block;
+      background: var(--yellow);
+      color: var(--black);
+      font-weight: 900;
+      font-size: 0.8rem;
+      padding: 4px 16px;
+      border-radius: 50px;
+      border: var(--outline);
+      box-shadow: var(--shadow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: 'Bangers', cursive;
+      font-size: clamp(2.2rem, 6vw, 4rem);
+      letter-spacing: 2px;
+      line-height: 1;
+    }
+    .section-title .accent { color: var(--yellow); }
+    .section-title .accent-red { color: var(--red); }
+    .section-title .accent-blue { color: var(--blue); }
+    .section-desc {
+      font-size: 1rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.7);
+      margin-top: 10px;
+      max-width: 500px;
+      margin-left: auto; margin-right: auto;
+    }
+
+    /* ===========================
+       CATEGORIES
+    =========================== */
+    #categorias { background: #111; }
+
+    .cat-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .cat-card {
+      background: var(--black);
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      padding: 36px 20px;
+      text-align: center;
+      cursor: pointer;
+      text-decoration: none;
+      display: block;
+      transition: transform 0.2s, box-shadow 0.2s;
+      box-shadow: var(--shadow-big);
+      position: relative;
+      overflow: hidden;
+    }
+    .cat-card::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: var(--cat-color, var(--yellow));
+      opacity: 0.08;
+      transition: opacity 0.3s;
+    }
+    .cat-card:hover::before { opacity: 0.18; }
+    .cat-card:hover { transform: translate(-4px,-4px); box-shadow: 10px 10px 0 rgba(255,215,0,0.5); }
+
+    .cat-icon { font-size: 3rem; display: block; margin-bottom: 12px; }
+    .cat-name {
+      font-family: 'Bangers', cursive;
+      font-size: 1.6rem;
+      letter-spacing: 2px;
+      color: var(--white);
+    }
+    .cat-count {
+      font-size: 0.8rem;
+      font-weight: 800;
+      color: rgba(255,255,255,0.5);
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+    .cat-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 900;
+      padding: 3px 10px;
+      border-radius: 50px;
+      margin-top: 10px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border: 2px solid currentColor;
+    }
+
+    /* ===========================
+       PRODUCTS
+    =========================== */
+    #productos { background: #0a0a0a; }
+
+    .filter-tabs {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .filter-tab {
+      background: transparent;
+      color: rgba(255,255,255,0.6);
+      border: 2px solid rgba(255,255,255,0.2);
+      padding: 8px 20px;
+      border-radius: 50px;
+      font-weight: 800;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.2s;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .filter-tab:hover, .filter-tab.active {
+      background: var(--yellow);
+      color: var(--black);
+      border-color: var(--yellow);
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product-card {
+      background: #161616;
+      border: 3px solid #222;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+    }
+    .product-card:hover {
+      transform: translate(-4px,-4px);
+      box-shadow: 8px 8px 0 var(--yellow);
+      border-color: var(--yellow);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px; left: 12px;
+      z-index: 2;
+      background: var(--red);
+      color: white;
+      font-weight: 900;
+      font-size: 0.72rem;
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 2px solid var(--black);
+      box-shadow: var(--shadow);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .product-badge.new { background: var(--blue); }
+    .product-badge.custom { background: var(--yellow); color: var(--black); }
+
+    .product-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      display: block;
+      background: #222;
+      font-size: 4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.15);
+      transition: transform 0.3s;
+    }
+    .product-card:hover .product-img { transform: scale(1.04); }
+
+    .product-emoji-img {
+      width: 100%;
+      aspect-ratio: 1;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      overflow: hidden;
+      position: relative;
+    }
+    .product-emoji-img::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.06), transparent 60%);
+    }
+
+    .product-info { padding: 16px; }
+    .product-cat {
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: var(--yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 5px;
+    }
+    .product-name {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 10px;
+    }
+    .product-price {
+      font-family: 'Bangers', cursive;
+      font-size: 1.8rem;
+      letter-spacing: 1px;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 14px;
+    }
+    .product-price small {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+      display: block;
+    }
+
+    .btn-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      width: 100%;
+      padding: 11px;
+      background: var(--wa-green);
+      color: white;
+      border: 3px solid var(--black);
+      box-shadow: var(--shadow);
+      border-radius: 8px;
+      font-weight: 900;
+      font-size: 0.9rem;
+      text-decoration: none;
+      transition: transform 0.15s, box-shadow 0.15s;
+      cursor: pointer;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .btn-wa:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-big); }
+    .btn-wa:active { transform: translate(1px,1px); box-shadow: 2px 2px 0 var(--black); }
+
+    /* ===========================
+       PERSONALIZACION
+    =========================== */
+    #personalizacion {
+      background: var(--yellow);
+      position: relative;
+      overflow: hidden;
+    }
+    #personalizacion::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.12) 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+    }
+    #personalizacion .section-title { color: var(--black); }
+    #personalizacion .section-label { background: var(--black); color: var(--yellow); }
+    #personalizacion .section-desc { color: rgba(0,0,0,0.6); }
+
+    .custom-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .custom-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .step-card {
+      background: var(--black);
+      border: 3px solid var(--black);
+      border-radius: var(--radius);
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: var(--shadow-big);
+      transition: transform 0.2s;
+    }
+    .step-card:hover { transform: translate(-3px,-3px); }
+
+    .step-num {
+      font-family: 'Bangers', cursive;
+      font-size: 3rem;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .step-icon { font-size: 2rem; margin-bottom: 10px; }
+    .step-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .step-desc { font-size: 0.88rem; color: rgba(255,255,255,0.65); line-height: 1.4; }
+
+    .custom-cta {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    /* ===========================
+       TESTIMONIOS
+    =========================== */
+    #testimonios { background: #111; }
+
+    .testi-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .testi-card {
+      background: #161616;
+      border: 3px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 24px;
+      position: relative;
+      transition: border-color 0.3s, transform 0.2s;
+    }
+    .testi-card:hover { border-color: var(--yellow); transform: translate(-3px,-3px); }
+
+    .testi-stars { font-size: 1.1rem; margin-bottom: 12px; color: var(--yellow); }
+    .testi-text {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+    .testi-author { display: flex; align-items: center; gap: 12px; }
+    .testi-avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      border: 3px solid var(--yellow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      background: #222;
+      box-shadow: var(--shadow);
+    }
+    .testi-name { font-weight: 900; font-size: 0.95rem; }
+    .testi-loc { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+    .testi-quote {
+      position: absolute;
+      top: 16px; right: 20px;
+      font-family: 'Bangers', cursive;
+      font-size: 4rem;
+      color: var(--yellow);
+      opacity: 0.15;
+      line-height: 1;
+    }
+
+    /* ===========================
+       ABOUT
+    =========================== */
+    #nosotros {
+      background: var(--red);
+      position: relative;
+      overflow: hidden;
+    }
+    #nosotros::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle, rgba(0,0,0,0.15) 1.5px, transparent 1.5px);
+      background-size: 20px 20px;
+    }
+    #nosotros .section-title { color: var(--white); }
+    #nosotros .section-label { background: var(--yellow); color: var(--black); }
+
+    .about-inner {
+      position: relative;
+      z-index: 1;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    @media(max-width:600px){ .about-grid { grid-template-columns: 1fr; } }
+
+    .about-card {
+      background: rgba(0,0,0,0.35);
+      border: 3px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius);
+      padding: 28px;
+      backdrop-filter: blur(6px);
+      transition: background 0.3s;
+    }
+    .about-card:hover { background: rgba(0,0,0,0.5); }
+    .about-card-icon { font-size: 2.2rem; margin-bottom: 10px; }
+    .about-card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--yellow);
+      margin-bottom: 8px;
+    }
+    .about-card-desc { font-size: 0.9rem; color: rgba(255,255,255,0.85); line-height: 1.5; }
+
+    /* ===========================
+       CONTACT
+    =========================== */
+    #contacto { background: var(--black); }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 40px auto 0;
+    }
+
+    .contact-card {
+      border: 3px solid #2a2a2a;
+      border-radius: var(--radius);
+      padding: 32px 24px;
+      text-align: center;
+      transition: border-color 0.3s, transform 0.2s, box-shadow 0.2s;
+      text-decoration: none;
+      color: inherit;
+      display: block;
+      background: #0f0f0f;
+    }
+    .contact-card:hover {
+      border-color: var(--yellow);
+      transform: translate(-4px,-4px);
+      box-shadow: 8px 8px 0 rgba(255,215,0,0.3);
+    }
+    .contact-card-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .contact-card-title {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+    .contact-card-value {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--yellow);
+    }
+    .contact-card-sub { font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px; }
+
+    .social-row {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .social-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 24px;
+      border-radius: 8px;
+      border: 3px solid var(--black);
+      box-shadow: var(--shadow);
+      font-weight: 900;
+      font-size: 0.9rem;
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      transition: transform 0.15s, box-shadow 0.15s;
+    }
+    .social-btn:hover { transform: translate(-2px,-2px); box-shadow: var(--shadow-big); }
+    .social-btn.ig { background: linear-gradient(135deg, #E1306C, #833AB4); }
+    .social-btn.tt { background: #010101; }
+    .social-btn.wa { background: var(--wa-green); }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      background: var(--yellow);
+      border-top: 4px solid var(--black);
+      padding: 40px 5% 24px;
+      text-align: center;
+    }
+    .footer-logo {
+      font-family: 'Bangers', cursive;
+      font-size: 2.5rem;
+      color: var(--black);
+      letter-spacing: 3px;
+      text-shadow: 3px 3px 0 var(--red);
+      margin-bottom: 8px;
+    }
+    .footer-logo span { color: var(--red); }
+    .footer-tagline {
+      font-weight: 800;
+      color: var(--black);
+      font-size: 0.9rem;
+      margin-bottom: 20px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .footer-links a {
+      color: var(--black);
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .footer-links a:hover { color: var(--red); }
+    .footer-bottom {
+      font-size: 0.8rem;
+      color: rgba(0,0,0,0.55);
+      font-weight: 700;
+      border-top: 2px solid rgba(0,0,0,0.15);
+      padding-top: 16px;
+      margin-top: 16px;
+    }
+
+    /* ===========================
+       WHATSAPP FLOAT
+    =========================== */
+    .wa-float {
+      position: fixed;
+      bottom: 28px;
+      right: 24px;
+      z-index: 9999;
+      background: var(--wa-green);
+      color: white;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 3px solid var(--black);
+      box-shadow: 4px 4px 0 var(--black);
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+      animation: wa-pulse 2.5s ease-in-out infinite;
+    }
+    .wa-float:hover { transform: scale(1.12); box-shadow: 6px 6px 0 var(--black); animation: none; }
+    .wa-float svg { width: 30px; }
+
+    .wa-float-label {
+      position: absolute;
+      right: 72px;
+      background: var(--black);
+      color: var(--yellow);
+      font-weight: 900;
+      font-size: 0.75rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      white-space: nowrap;
+      border: 2px solid var(--yellow);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+    .wa-float:hover .wa-float-label { opacity: 1; }
+
+    @keyframes wa-pulse {
+      0%,100% { box-shadow: 4px 4px 0 var(--black), 0 0 0 0 rgba(37,211,102,0.5); }
+      50% { box-shadow: 4px 4px 0 var(--black), 0 0 0 12px rgba(37,211,102,0); }
+    }
+
+    /* ===========================
+       STATS SECTION
+    =========================== */
+    .stats-bar {
+      background: var(--blue);
+      border-top: 3px solid var(--black);
+      border-bottom: 3px solid var(--black);
+      padding: 30px 5%;
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Bangers', cursive;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      color: var(--white);
+      line-height: 1;
+      display: block;
+    }
+    .stat-label {
+      font-size: 0.78rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.75);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    /* ===========================
+       MARQUEE
+    =========================== */
+    .marquee-wrap {
+      background: var(--red);
+      border-top: 3px solid var(--black);
+      border-bottom: 3px solid var(--black);
+      padding: 12px 0;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+    .marquee-inner {
+      display: inline-block;
+      animation: marquee 18s linear infinite;
+      font-family: 'Bangers', cursive;
+      font-size: 1.3rem;
+      letter-spacing: 3px;
+      color: white;
+    }
+    .marquee-inner span { margin: 0 30px; }
+    .marquee-inner .sep { color: var(--yellow); }
+    @keyframes marquee { 0%{transform:translateX(0)} 100%{transform:translateX(-50%)} }
+
+    /* ===========================
+       ANIMATIONS
+    =========================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ===========================
+       RESPONSIVE
+    =========================== */
+    @media(max-width:768px){
+      .nav-links, .nav-wa-btn { display: none; }
+      .hamburger { display: flex; }
+      .trust-bar { gap: 20px; }
+      .trust-item { font-size: 0.8rem; }
+      .about-grid { grid-template-columns: 1fr; }
+      .stats-bar { gap: 28px; }
+      section { padding: 60px 5%; }
+      .products-grid { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 14px; }
+      .product-price { font-size: 1.4rem; }
+    }
+    @media(max-width:480px){
+      .hero-btns { flex-direction: column; align-items: center; }
+      .btn-primary, .btn-secondary { width: 100%; justify-content: center; }
+      .products-grid { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===========================
+     NAVBAR
+=========================== -->
+<nav>
+  <a href="#inicio" class="nav-logo">Anime<span>Top</span></a>
+  <ul class="nav-links">
+    <li><a href="#categorias">Categorías</a></li>
+    <li><a href="#productos">Productos</a></li>
+    <li><a href="#personalizacion">Personaliza</a></li>
+    <li><a href="#nosotros">Nosotros</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+  <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20hacer%20un%20pedido%20🔥" target="_blank" class="nav-wa-btn">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+    WhatsApp
+  </a>
+  <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#categorias" onclick="toggleMenu()">🏷️ Categorías</a>
+  <a href="#productos" onclick="toggleMenu()">🛍️ Productos</a>
+  <a href="#personalizacion" onclick="toggleMenu()">✏️ Personaliza</a>
+  <a href="#nosotros" onclick="toggleMenu()">🏠 Nosotros</a>
+  <a href="#contacto" onclick="toggleMenu()">📱 Contacto</a>
+  <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20hacer%20un%20pedido%20🔥" target="_blank" style="color:#25D366">💬 WhatsApp</a>
+</div>
+
+<!-- ===========================
+     HERO
+=========================== -->
+<section id="inicio">
+  <div id="hero">
+    <div class="hero-burst"></div>
+    <div class="hero-content">
+      <div class="hero-badge">🇩🇴 Rep. Dominicana · Tienda Oficial</div>
+      <h1 class="hero-title">
+        Lleva tu<br>
+        <span class="highlight">Anime</span><br>
+        al siguiente<br>
+        <span class="highlight-blue">nivel</span> 🔥
+      </h1>
+      <p class="hero-sub">
+        Hoodies, posters, lámparas LED, mangas y mucho más.<br>
+        ¡Tu tienda de anime &amp; gaming #1 en RD!
+      </p>
+      <div class="hero-btns">
+        <a href="#productos" class="btn-primary">🛍️ Comprar Ahora</a>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20ver%20el%20catálogo%20😊" target="_blank" class="btn-secondary">💬 Ver Catálogo</a>
+      </div>
+      <div class="hero-tags">
+        <span class="hero-tag">🧥 Hoodies</span>
+        <span class="hero-tag">🖼️ Posters</span>
+        <span class="hero-tag">💡 Lámparas LED</span>
+        <span class="hero-tag">🎮 Gamer</span>
+        <span class="hero-tag">📚 Mangas</span>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      Explorar
+    </div>
+  </div>
+</section>
+
+<!-- TRUST BAR -->
+<div class="trust-bar">
+  <div class="trust-item"><span class="icon">🏪</span><div><b>Tienda Física</b><br>+ Online en RD</div></div>
+  <div class="trust-item"><span class="icon">✅</span><div><b>100% Nuevos</b><br>Garantizados</div></div>
+  <div class="trust-item"><span class="icon">🎨</span><div><b>Personalización</b><br>Disponible</div></div>
+  <div class="trust-item"><span class="icon">🚚</span><div><b>Entregas</b><br>Seguras</div></div>
+  <div class="trust-item"><span class="icon">💬</span><div><b>Atención</b><br>por WhatsApp</div></div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap">
+  <div class="marquee-inner">
+    <span>ONE PIECE</span><span class="sep">✦</span>
+    <span>NARUTO</span><span class="sep">✦</span>
+    <span>DEMON SLAYER</span><span class="sep">✦</span>
+    <span>JUJUTSU KAISEN</span><span class="sep">✦</span>
+    <span>DRAGON BALL</span><span class="sep">✦</span>
+    <span>ATTACK ON TITAN</span><span class="sep">✦</span>
+    <span>BLEACH</span><span class="sep">✦</span>
+    <span>MY HERO ACADEMIA</span><span class="sep">✦</span>
+    <span>HUNTER X HUNTER</span><span class="sep">✦</span>
+    <!-- repeat for seamless loop -->
+    <span>ONE PIECE</span><span class="sep">✦</span>
+    <span>NARUTO</span><span class="sep">✦</span>
+    <span>DEMON SLAYER</span><span class="sep">✦</span>
+    <span>JUJUTSU KAISEN</span><span class="sep">✦</span>
+    <span>DRAGON BALL</span><span class="sep">✦</span>
+    <span>ATTACK ON TITAN</span><span class="sep">✦</span>
+    <span>BLEACH</span><span class="sep">✦</span>
+    <span>MY HERO ACADEMIA</span><span class="sep">✦</span>
+    <span>HUNTER X HUNTER</span><span class="sep">✦</span>
+  </div>
+</div>
+
+<!-- ===========================
+     CATEGORÍAS
+=========================== -->
+<section id="categorias">
+  <div class="section-header reveal">
+    <div class="section-label">🏷️ Lo que tenemos</div>
+    <h2 class="section-title">Nuestras <span class="accent">Categorías</span></h2>
+    <p class="section-desc">Todo lo que un verdadero otaku y gamer necesita</p>
+  </div>
+  <div class="cat-grid">
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#FFD700">
+      <span class="cat-icon">🧥</span>
+      <div class="cat-name">Hoodies</div>
+      <div class="cat-count">Personalizados</div>
+      <div class="cat-tag" style="color:var(--yellow)">Ver más →</div>
+    </a>
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#E8192C">
+      <span class="cat-icon">🖼️</span>
+      <div class="cat-name">Posters</div>
+      <div class="cat-count">Anime & Gaming</div>
+      <div class="cat-tag" style="color:var(--red)">Ver más →</div>
+    </a>
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#00A8E8">
+      <span class="cat-icon">💡</span>
+      <div class="cat-name">Lámparas</div>
+      <div class="cat-count">LED Neon</div>
+      <div class="cat-tag" style="color:var(--blue)">Ver más →</div>
+    </a>
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#FFD700">
+      <span class="cat-icon">🔑</span>
+      <div class="cat-name">Llaveros</div>
+      <div class="cat-count">Acrílicos</div>
+      <div class="cat-tag" style="color:var(--yellow)">Ver más →</div>
+    </a>
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#E8192C">
+      <span class="cat-icon">📚</span>
+      <div class="cat-name">Mangas</div>
+      <div class="cat-count">Colección</div>
+      <div class="cat-tag" style="color:var(--red)">Ver más →</div>
+    </a>
+    <a href="#productos" class="cat-card reveal" style="--cat-color:#00A8E8">
+      <span class="cat-icon">🎮</span>
+      <div class="cat-name">Gamer</div>
+      <div class="cat-count">Overlays & más</div>
+      <div class="cat-tag" style="color:var(--blue)">Ver más →</div>
+    </a>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar">
+  <div class="stat-item reveal">
+    <span class="stat-num">500+</span>
+    <span class="stat-label">Clientes felices</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-num">100+</span>
+    <span class="stat-label">Productos</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-num">50+</span>
+    <span class="stat-label">Series disponibles</span>
+  </div>
+  <div class="stat-item reveal">
+    <span class="stat-num">2+</span>
+    <span class="stat-label">Años de experiencia</span>
+  </div>
+</div>
+
+<!-- ===========================
+     PRODUCTOS
+=========================== -->
+<section id="productos">
+  <div class="section-header reveal">
+    <div class="section-label">🛍️ Catálogo</div>
+    <h2 class="section-title">Productos <span class="accent-red">Top</span> 🔥</h2>
+    <p class="section-desc">Los favoritos de nuestra comunidad anime & gamer</p>
+  </div>
+
+  <div class="filter-tabs">
+    <button class="filter-tab active" onclick="filterProducts('all',this)">Todos</button>
+    <button class="filter-tab" onclick="filterProducts('hoodie',this)">Hoodies</button>
+    <button class="filter-tab" onclick="filterProducts('poster',this)">Posters</button>
+    <button class="filter-tab" onclick="filterProducts('lampara',this)">Lámparas</button>
+    <button class="filter-tab" onclick="filterProducts('llavero',this)">Llaveros</button>
+    <button class="filter-tab" onclick="filterProducts('manga',this)">Mangas</button>
+    <button class="filter-tab" onclick="filterProducts('gamer',this)">Gamer</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid">
+
+    <!-- Hoodie Luffy Gear 5 -->
+    <div class="product-card reveal" data-cat="hoodie">
+      <div class="product-badge">🔥 Popular</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#1a1a2e,#2d2d44)">🌊</div>
+      <div class="product-info">
+        <div class="product-cat">Hoodie</div>
+        <div class="product-name">Hoodie Luffy Gear 5</div>
+        <div class="product-price">RD$1,800<small>Tallas S–3XL</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Hoodie%20Luffy%20Gear%205%20🌊" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Hoodie Akatsuki -->
+    <div class="product-card reveal" data-cat="hoodie">
+      <div class="product-badge new">🆕 Nuevo</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#1a0a0a,#3d0000)">☁️</div>
+      <div class="product-info">
+        <div class="product-cat">Hoodie</div>
+        <div class="product-name">Hoodie Akatsuki Edition</div>
+        <div class="product-price">RD$1,800<small>Tallas S–3XL</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Hoodie%20Akatsuki%20☁️" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Hoodie Gojo -->
+    <div class="product-card reveal" data-cat="hoodie">
+      <div class="product-badge custom">✨ Limitado</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0a0a1a,#1a1a3d)">👁️</div>
+      <div class="product-info">
+        <div class="product-cat">Hoodie</div>
+        <div class="product-name">Hoodie Gojo Satoru</div>
+        <div class="product-price">RD$1,800<small>Tallas S–3XL</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Hoodie%20Gojo%20Satoru%20👁️" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Poster One Piece -->
+    <div class="product-card reveal" data-cat="poster">
+      <div class="product-badge">🖼️ Arte</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0d1b2a,#1b3a5c)">⚓</div>
+      <div class="product-info">
+        <div class="product-cat">Poster</div>
+        <div class="product-name">Poster One Piece 60×90cm</div>
+        <div class="product-price">RD$550<small>Alta calidad · Acabado brillante</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Poster%20One%20Piece%20⚓" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Lámpara LED -->
+    <div class="product-card reveal" data-cat="lampara">
+      <div class="product-badge new">💡 LED</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0d0d2b,#1a0050)">⚡</div>
+      <div class="product-info">
+        <div class="product-cat">Lámpara LED</div>
+        <div class="product-name">Lámpara LED Naruto Sharingan</div>
+        <div class="product-price">RD$1,200<small>Luz RGB · Control remoto</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20la%20Lámpara%20LED%20Sharingan%20⚡" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Llavero DBZ -->
+    <div class="product-card reveal" data-cat="llavero">
+      <div class="product-badge">🔑 Acrilico</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#1a0a00,#3d1a00)">⭐</div>
+      <div class="product-info">
+        <div class="product-cat">Llavero</div>
+        <div class="product-name">Llavero Acrílico Dragon Ball</div>
+        <div class="product-price">RD$250<small>Pack disponible · Varios diseños</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Llavero%20Dragon%20Ball%20⭐" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Manga -->
+    <div class="product-card reveal" data-cat="manga">
+      <div class="product-badge">📚 Manga</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0a1a0a,#1a3d1a)">🌿</div>
+      <div class="product-info">
+        <div class="product-cat">Manga</div>
+        <div class="product-name">Manga Demon Slayer Vol. 1–5</div>
+        <div class="product-price">RD$700<small>Por volumen · Ed. Español</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Manga%20Demon%20Slayer%20🌿" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Overlay Gamer -->
+    <div class="product-card reveal" data-cat="gamer">
+      <div class="product-badge new">🎮 Gaming</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#001a0d,#003d1a)">🎮</div>
+      <div class="product-info">
+        <div class="product-cat">Gamer</div>
+        <div class="product-name">Overlay Stream Anime Pack</div>
+        <div class="product-price">RD$800<small>Formato digital · Envío inmediato</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Overlay%20Stream%20Anime%20🎮" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Poster Demon Slayer -->
+    <div class="product-card reveal" data-cat="poster">
+      <div class="product-badge">🖼️ Arte</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#2b0000,#5a0000)">🗡️</div>
+      <div class="product-info">
+        <div class="product-cat">Poster</div>
+        <div class="product-name">Poster Demon Slayer Tanjiro</div>
+        <div class="product-price">RD$550<small>Alta calidad · 60×90cm</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Poster%20Demon%20Slayer%20🗡️" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Lámpara Attack on Titan -->
+    <div class="product-card reveal" data-cat="lampara">
+      <div class="product-badge new">💡 LED</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0d1a0d,#1a3d0d)">⚔️</div>
+      <div class="product-info">
+        <div class="product-cat">Lámpara LED</div>
+        <div class="product-name">Lámpara LED Eren Yeager</div>
+        <div class="product-price">RD$1,200<small>Varios modos de luz</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20la%20Lámpara%20Eren%20Yeager%20⚔️" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Llavero Jujutsu -->
+    <div class="product-card reveal" data-cat="llavero">
+      <div class="product-badge custom">✨ Custom</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#0a0a0a,#2a2a2a)">🩵</div>
+      <div class="product-info">
+        <div class="product-cat">Llavero</div>
+        <div class="product-name">Llavero Jujutsu Kaisen Pack x4</div>
+        <div class="product-price">RD$850<small>Pack de 4 personajes</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Pack%20Llaveros%20JJK%20🩵" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+    <!-- Hoodie Demon Slayer -->
+    <div class="product-card reveal" data-cat="hoodie">
+      <div class="product-badge">🔥 Top</div>
+      <div class="product-emoji-img" style="background:linear-gradient(135deg,#1a0a1a,#3d003d)">🌸</div>
+      <div class="product-info">
+        <div class="product-cat">Hoodie</div>
+        <div class="product-name">Hoodie Nezuko & Tanjiro</div>
+        <div class="product-price">RD$1,800<small>Tallas S–3XL</small></div>
+        <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20el%20Hoodie%20Demon%20Slayer%20🌸" target="_blank" class="btn-wa">
+          <svg viewBox="0 0 24 24" fill="currentColor" width="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+          Pedir por WhatsApp
+        </a>
+      </div>
+    </div>
+
+  </div><!-- end products-grid -->
+</section>
+
+<!-- ===========================
+     PERSONALIZACIÓN
+=========================== -->
+<section id="personalizacion">
+  <div class="custom-inner">
+    <div class="section-header reveal">
+      <div class="section-label">🎨 Custom</div>
+      <h2 class="section-title" style="color:var(--black)">Diseño <span style="color:var(--red)">Personalizado</span></h2>
+      <p class="section-desc" style="color:rgba(0,0,0,0.65)">¿Tu anime favorito no está en el catálogo? ¡Nosotros lo hacemos!</p>
+    </div>
+    <div class="custom-steps">
+      <div class="step-card reveal">
+        <div class="step-num">01</div>
+        <div class="step-icon">💬</div>
+        <div class="step-title">Contáctanos</div>
+        <div class="step-desc">Escríbenos por WhatsApp y cuéntanos qué diseño quieres. Personaje, colores, estilo, todo.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">02</div>
+        <div class="step-icon">🎨</div>
+        <div class="step-title">Diseñamos</div>
+        <div class="step-desc">Nuestro equipo crea el diseño digital de tu producto. Te enviamos preview antes de imprimir.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">03</div>
+        <div class="step-icon">✅</div>
+        <div class="step-title">Apruebas</div>
+        <div class="step-desc">Revisas el diseño y das el visto bueno. ¿Cambios? Sin problema, los hacemos gratis.</div>
+      </div>
+      <div class="step-card reveal">
+        <div class="step-num">04</div>
+        <div class="step-icon">🚀</div>
+        <div class="step-title">Lo recibes</div>
+        <div class="step-desc">Producimos e imprimimos tu pedido con la mejor calidad. Envío a toda República Dominicana.</div>
+      </div>
+    </div>
+    <div class="custom-cta reveal">
+      <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20pedir%20un%20diseño%20personalizado%20🎨" target="_blank" class="btn-primary" style="background:var(--black);color:var(--yellow)">
+        🎨 Pedir Mi Diseño Personalizado
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     TESTIMONIOS
+=========================== -->
+<section id="testimonios">
+  <div class="section-header reveal">
+    <div class="section-label">⭐ Reviews</div>
+    <h2 class="section-title">Lo que dicen <span class="accent">nuestros</span> clientes</h2>
+    <p class="section-desc">La familia AnimeTop crece cada día 🔥</p>
+  </div>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">Mi hoodie de Luffy Gear 5 llegó perfecta, la calidad es brutal. Ya pedí dos más para mis amigos. ¡Definitivamente la mejor tienda anime de RD!</div>
+      <div class="testi-author">
+        <div class="testi-avatar">👦</div>
+        <div><div class="testi-name">Carlos M.</div><div class="testi-loc">📍 Santo Domingo</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">Pedí un diseño personalizado de Gojo y quedó increíble. El equipo fue súper atento y el envío llegó rapidísimo. 100% recomendado 🔥</div>
+      <div class="testi-author">
+        <div class="testi-avatar">👧</div>
+        <div><div class="testi-name">Valentina R.</div><div class="testi-loc">📍 Santiago</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">Los overlays para mi stream son únicos, nadie los tiene. AnimeTop se convirtió en mi tienda favorita. Los posters también son top calidad.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">🎮</div>
+        <div><div class="testi-name">Diego_RD</div><div class="testi-loc">📍 La Vega</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">Compré una lámpara LED de Naruto y decoró mi cuarto completamente. Mis amigos no pueden creer dónde la conseguí. Gracias AnimeTop!</div>
+      <div class="testi-author">
+        <div class="testi-avatar">✨</div>
+        <div><div class="testi-name">Mariana V.</div><div class="testi-loc">📍 San Pedro</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">Pedí varios llaveros de Akatsuki y Dragon Ball como regalos. Llegaron súper bien empacados. El precio es excelente para la calidad que ofrecen.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">⚔️</div>
+        <div><div class="testi-name">Roberto K.</div><div class="testi-loc">📍 Puerto Plata</div></div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <div class="testi-quote">"</div>
+      <div class="testi-stars">⭐⭐⭐⭐⭐</div>
+      <div class="testi-text">La atención por WhatsApp es rapidísima, responden de inmediato. Hice mi pedido hoy y mañana lo tenía. No cambio a AnimeTop por ninguna otra tienda.</div>
+      <div class="testi-author">
+        <div class="testi-avatar">🌊</div>
+        <div><div class="testi-name">Andrés L.</div><div class="testi-loc">📍 Higüey</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     NOSOTROS
+=========================== -->
+<section id="nosotros">
+  <div class="about-inner">
+    <div class="section-header reveal">
+      <div class="section-label">🏠 Nuestra historia</div>
+      <h2 class="section-title">¿Quiénes somos?</h2>
+    </div>
+    <div class="about-grid">
+      <div class="about-card reveal">
+        <div class="about-card-icon">🏪</div>
+        <div class="about-card-title">Tienda Física & Online</div>
+        <div class="about-card-desc">AnimeTop es una tienda 100% dominicana con presencia física en República Dominicana y tienda online disponible para todo el país. Somos apasionados del anime y el gaming.</div>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">🎯</div>
+        <div class="about-card-title">Nuestra Misión</div>
+        <div class="about-card-desc">Llevar los mejores productos de anime y gaming a todos los dominicanos que comparten nuestra pasión. Calidad, diseño y personalización sin igual.</div>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">✅</div>
+        <div class="about-card-title">Garantía de Calidad</div>
+        <div class="about-card-desc">Todos nuestros productos son 100% nuevos y verificados. Trabajamos con materiales de alta calidad para garantizar tu satisfacción total.</div>
+      </div>
+      <div class="about-card reveal">
+        <div class="about-card-icon">🇩🇴</div>
+        <div class="about-card-title">Orgullosamente Dominicanos</div>
+        <div class="about-card-desc">Somos un negocio local que ama su cultura y su comunidad otaku. Entregamos en todo el territorio nacional con envíos rápidos y seguros.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===========================
+     CONTACTO
+=========================== -->
+<section id="contacto">
+  <div class="section-header reveal">
+    <div class="section-label">📱 Contáctanos</div>
+    <h2 class="section-title">Habla con <span class="accent">nosotros</span></h2>
+    <p class="section-desc">Estamos listos para ayudarte con tu pedido ❤️</p>
+  </div>
+  <div class="contact-grid">
+    <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20hacer%20un%20pedido%20🔥" target="_blank" class="contact-card reveal">
+      <div class="contact-card-icon">💬</div>
+      <div class="contact-card-title">WhatsApp</div>
+      <div class="contact-card-value">809-775-4749</div>
+      <div class="contact-card-sub">Respuesta inmediata ⚡</div>
+    </a>
+    <a href="https://www.instagram.com/animetoprd" target="_blank" class="contact-card reveal">
+      <div class="contact-card-icon">📸</div>
+      <div class="contact-card-title">Instagram</div>
+      <div class="contact-card-value">@animetoprd</div>
+      <div class="contact-card-sub">Síguenos para novedades 🔥</div>
+    </a>
+    <a href="https://www.tiktok.com/@animetoprd" target="_blank" class="contact-card reveal">
+      <div class="contact-card-icon">🎵</div>
+      <div class="contact-card-title">TikTok</div>
+      <div class="contact-card-value">@animetoprd</div>
+      <div class="contact-card-sub">Contenido anime & gaming 🎮</div>
+    </a>
+    <div class="contact-card reveal" style="cursor:default">
+      <div class="contact-card-icon">📍</div>
+      <div class="contact-card-title">Ubicación</div>
+      <div class="contact-card-value">Rep. Dominicana</div>
+      <div class="contact-card-sub">Envíos a todo el país 🇩🇴</div>
+    </div>
+  </div>
+  <div class="social-row reveal">
+    <a href="https://www.instagram.com/animetoprd" target="_blank" class="social-btn ig">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+      Instagram
+    </a>
+    <a href="https://www.tiktok.com/@animetoprd" target="_blank" class="social-btn tt">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-2.88 2.5 2.89 2.89 0 0 1-2.89-2.89 2.89 2.89 0 0 1 2.89-2.89c.28 0 .54.04.79.1V9.01a6.32 6.32 0 0 0-.79-.05 6.34 6.34 0 0 0-6.34 6.34 6.34 6.34 0 0 0 6.34 6.34 6.34 6.34 0 0 0 6.33-6.34V8.69a8.17 8.17 0 0 0 4.77 1.52V6.76a4.85 4.85 0 0 1-1-.07z"/></svg>
+      TikTok
+    </a>
+    <a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20hacer%20un%20pedido%20🔥" target="_blank" class="social-btn wa">
+      <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+      WhatsApp
+    </a>
+  </div>
+</section>
+
+<!-- ===========================
+     FOOTER
+=========================== -->
+<footer>
+  <div class="footer-logo">Anime<span>Top</span> アニメトップ</div>
+  <div class="footer-tagline">🇩🇴 Tu tienda de anime & gaming #1 en República Dominicana</div>
+  <div class="footer-links">
+    <a href="#inicio">Inicio</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#productos">Productos</a>
+    <a href="#personalizacion">Personaliza</a>
+    <a href="#nosotros">Nosotros</a>
+    <a href="#contacto">Contacto</a>
+  </div>
+  <div class="footer-bottom">
+    © 2025 AnimeTop Store · República Dominicana · Todos los derechos reservados<br>
+    💬 WhatsApp: 809-775-4749
+  </div>
+</footer>
+
+<!-- WhatsApp Float Button -->
+<a href="https://wa.me/18097754749?text=Hola%20AnimeTop!%20Quiero%20hacer%20un%20pedido%20🔥" target="_blank" class="wa-float" aria-label="Contactar por WhatsApp">
+  <span class="wa-float-label">¡Escríbenos!</span>
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.126 1.535 5.862L.057 23.857l6.144-1.608A11.945 11.945 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.878 0-3.632-.5-5.148-1.375l-.37-.219-3.814 1 1.021-3.714-.239-.38A9.977 9.977 0 012 12C2 6.478 6.478 2 12 2s10 4.478 10 10-4.478 10-10 10z"/></svg>
+</a>
+
+<!-- ===========================
+     JAVASCRIPT
+=========================== -->
+<script>
+  // Mobile Menu Toggle
+  function toggleMenu() {
+    const menu = document.getElementById('mobileMenu');
+    menu.classList.toggle('open');
+  }
+
+  // Product Filter
+  function filterProducts(cat, btn) {
+    // Update active tab
+    document.querySelectorAll('.filter-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Filter cards
+    const cards = document.querySelectorAll('.product-card');
+    cards.forEach(card => {
+      if (cat === 'all' || card.dataset.cat === cat) {
+        card.style.display = '';
+        card.style.animation = 'fadeIn 0.3s ease';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  }
+
+  // Scroll Reveal Animation
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          entry.target.classList.add('visible');
+        }, 80 * (entry.target.dataset.delay || 0));
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+
+  document.querySelectorAll('.reveal').forEach((el, i) => {
+    el.dataset.delay = i % 4;
+    revealObserver.observe(el);
+  });
+
+  // Navbar scroll effect
+  window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 50) {
+      nav.style.background = 'rgba(13,13,13,0.97)';
+      nav.style.backdropFilter = 'blur(10px)';
+    } else {
+      nav.style.background = 'var(--black)';
+      nav.style.backdropFilter = 'none';
+    }
+  });
+
+  // Close mobile menu on scroll
+  window.addEventListener('scroll', () => {
+    document.getElementById('mobileMenu').classList.remove('open');
+  });
+</script>
+</body>
+</html>
